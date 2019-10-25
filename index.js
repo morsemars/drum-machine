@@ -29,6 +29,7 @@ playButton.onclick = e => {
 
 window.onload = () => {
     audioContext = new AudioContext();
+    console.log("Ready");
 }
 
 function Kick(context) {
