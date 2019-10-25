@@ -7,6 +7,255 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <div id="root"></div>
+    <div class="container">
+        <div class="connections-container">
+            <div class="screw top left"></div>
+            <div class="screw top right"></div>
+        </div>
+        <div class="controls-container">
+            <div class="stutter-controls">
+                <p>Stutter</p>
+                <div class="knobs">
+                    
+                    <div class="knob-surround">
+                        <p>Time</p>
+                        <div class="knob large-knob clear-color"></div>
+
+                    </div>
+                    <div class="knob-surround">
+                        <p>Depth</p>
+                        <div class="knob large-knob clear-color"></div>
+                    </div>
+                </div>
+                <div class="bpm-diplay">
+                    
+                </div>
+            </div>
+            <div class="analog-controls kick">
+                <p>Click</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>Pitch</p>
+                <div class="knob small-knob"></div>
+                <p>Decay</p>
+                <div class="knob small-knob"></div>
+                <h5>KICK</h5>
+            </div>
+            <div class="analog-controls snare">
+                <p>Snappy</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>Pitch</p>
+                <div class="knob small-knob"></div>
+                <p>Decay</p>
+                <div class="knob small-knob"></div>
+                <h5>SNARE</h5>
+            </div>
+            <div class="analog-controls tom">
+                <p>Hi Pitch</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>Low Pitch</p>
+                <div class="knob small-knob  clear-color"></div>
+                <p>Decay</p>
+                <div class="knob small-knob"></div>
+                <h5>TOM</h5>
+            </div>
+            <div class="analog-controls hihat">
+                <p>Closed Decay</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>Open Decay</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>Grain</p>
+                <div class="knob small-knob"></div>
+                <h5>HAT</h5>
+            </div>
+            <div class="analog-controls">
+                <p>PCM Decay</p>
+                <div class="knob small-knob clear-color"></div>
+                <p>&lt;</p>
+                <div class="button"></div>
+                <p>Memory</p>
+                <div class="button"></div>
+                <h5 class="spacer">&nbsp;</h5>
+            </div>
+
+            <div class="analog-controls">
+                <p>Tempo</p>
+                <div id="tempo-knob" class="knob small-knob clear-color"></div>
+                <p>&gt;</p>
+                <div class="button"></div>
+                <p>Step Mode</p>
+                <div class="button"></div>
+                <h5 class="spacer">&nbsp;</h5>
+            </div>
+
+            <div class="analog-controls">
+                <p>Part Level</p>
+                <div class="knob small-knob"></div>
+                <p>Mute</p>
+                <div class="button"></div>
+                <p>Play</p>
+                <div id="play-btn" class="button"></div>
+                <h5 class="spacer">&nbsp;</h5>
+            </div>
+
+            <div class="analog-controls">
+                <p>Volume</p>
+                <div class="knob small-knob"></div>
+                <p>Fn</p>
+                <div class="button"></div>
+                <p>Rec</p>
+                <div class="button"></div>
+                <h5 class="spacer">&nbsp;</h5>
+            </div>
+
+            <div class="screw bottom left"></div>
+            <div class="screw bottom right"></div>
+        </div>
+        <div class="step-sequencer-container">
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Kick</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Snare</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Lo Tom</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>HiTom</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>CL Hat</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Op Hat</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Clap</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Claves</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Agogo</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>Crash</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+            <div class="step-sequence">
+                <div class="step-button">
+                    <div class="step-status">
+                    </div>
+                </div>
+                <p>&nbsp</p>
+                <div class="sequence-indicator"></div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

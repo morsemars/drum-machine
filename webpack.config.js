@@ -21,7 +21,7 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
+                    presets: ['@babel/preset-env']
                 }
             },
             {
@@ -31,21 +31,6 @@ module.exports = {
                     "css-loader",
                     "postcss-loader",
                     "sass-loader"
-                    /* {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    {
-                        loader: "css-loader"
-                    },
-                    {
-                        loader: "postcss-loader"
-                    },
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            implementation: require("sass")
-                        }
-                    } */
                 ]
             }
         ]
