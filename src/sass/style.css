@@ -232,6 +232,10 @@ div.small-knob.active{
     background-color: rgb(239, 130, 129);
 }
 
-div.small-knob:hover, div.button:hover, div.step-button:hover, div.large-knob:hover{
+div.small-knob:hover, div.large-knob:hover{
+    cursor: ns-resize;
+}
+
+div.button:hover, div.step-button:hover{
     cursor: pointer;
 }

@@ -1,8 +1,11 @@
 const MAX_KNOB_VALUE = 130;
 const MIN_KNOB_VALUE = -1 * MAX_KNOB_VALUE;
-const KNOB_SENSITIVITY = 5;
+const KNOB_SENSITIVITY = 0.2;
 
-const clearOnMouseMoveEvent = event => event.target.onmousemove = null;
+let isChanging = false;
+let targetObject;
+let startingY;
+
 const computePercentValue = degree => (degree + MAX_KNOB_VALUE) / (2 * MAX_KNOB_VALUE);
 const isWithinKnobRange = degree => degree >= MIN_KNOB_VALUE && degree <= MAX_KNOB_VALUE;
 
@@ -14,24 +17,30 @@ const getCurrentDegree = element => {
     return parseInt(numberPattern.exec(transformValue)[0]);
 }
 
-const rotateKnob = event => {
-    let degreeChange;
-    let currentDegree = getCurrentDegree(event.target);
+const hasClass = (className, element) =>  element.className.includes(className);
 
-    event.target.onmousemove = event => {
-        degreeChange = (event.movementY) * -1 * KNOB_SENSITIVITY;
+export const disableRotation = event => {
+    targetObject = null;
+    isChanging = false;
+}
+
+export const enableRotation = event => {
+    startingY = event.clientY;
+    targetObject = event.target;
+    isChanging = true;
+}
+export const rotateKnob = event => {
+    event.preventDefault();
+    if(isChanging && hasClass("knob", targetObject)){
+        let degreeChange;
+        let currentDegree = getCurrentDegree(targetObject);
+
+        degreeChange = (startingY - event.clientY) * KNOB_SENSITIVITY;
         currentDegree += degreeChange;
         if(isWithinKnobRange(currentDegree)){
-            event.target.value = computePercentValue(currentDegree);                                                     
-            event.target.style.transform = `rotate(${currentDegree}deg)`
+            targetObject.setAttribute("data-value", computePercentValue(currentDegree))                                                   
+            targetObject.style.transform = `rotate(${currentDegree}deg)`;
         }
     }
-}
 
-const init = (controlKnob) => {
-    controlKnob.onmousedown = rotateKnob;
-    controlKnob.onmouseout = clearOnMouseMoveEvent;
-    controlKnob.onmouseup = clearOnMouseMoveEvent;
 }
-
-export default init;
