@@ -29,6 +29,7 @@ export const enableRotation = event => {
     targetObject = event.target;
     isChanging = true;
 }
+
 export const rotateKnob = event => {
     event.preventDefault();
     if(isChanging && hasClass("knob", targetObject)){

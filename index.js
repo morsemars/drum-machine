@@ -5,5 +5,5 @@ const container = document.getElementsByClassName("container")[0];
 
 container.onmousedown = enableRotation;
 document.onmouseup = disableRotation;
-container.onmousemove = rotateKnob;
+document.onmousemove = rotateKnob;
 
